@@ -1,0 +1,15 @@
+// {
+//     "extends": ["eslint:recommended", "plugin:react/recommended"]
+//   }
+
+// {
+//   "plugins": [
+//       "react"
+//     ],
+//     "extends": ["eslint:all", "plugin:react/all"]
+// }
+
+{
+  "extends": ["react-app", "plugin:jsx-a11y/recommended"],
+  "plugins": ["jsx-a11y"]
+}
