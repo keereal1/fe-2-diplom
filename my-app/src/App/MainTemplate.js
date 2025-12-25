@@ -1,11 +1,11 @@
 import { Outlet } from "react-router-dom";
-import { MainMenu } from "./MainMenu";
-import { Footer } from "./Footer";
+import { Header } from "../Components/Header";
+import { Footer } from "../Components/Footer";
 
 export const MainTemplate = () => {
     return (
         <>
-            <MainMenu/>
+            <Header/>
                 <Outlet/>
             <Footer/>
         </>
