@@ -8,7 +8,7 @@
 }
 
 .header {
-  background-image: url('../public/images/header-img.png');
+  background-image: url('../public/images/main_image.png');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -20,7 +20,15 @@
   padding-top: 15px;
 }
 
+.logo {
+  font-size: 36px;
+  font-weight: 900;
+  padding-left: 258px;
+}
+
 .menu-list {
+  display: flex;
+  align-items: center;
   height: 94px;
   background-color: #292929;
 }
@@ -28,10 +36,11 @@
 .menu-items {
   list-style-type: none;
   display: flex;
-  gap: 16px;  
-  font-size: 30px;  
+  align-content: center;
+  gap: 83px;  
+  font-size: 30px;
+  font-weight: 300;  
   padding-left: 258px;
-  
 }
 
 .menu-link {
@@ -39,6 +48,10 @@
   padding-bottom: 25px;
   text-decoration: none;
   color: #FFFFFF;
+}
+
+.menu-link:hover {
+  text-decoration: underline;
 }
 
 .main-title {
@@ -106,8 +119,57 @@ span {
 .search-form__direction-container,
 .search-date-container {
   display: flex;
-  gap: 37px;
   margin: 0 auto;
+}
+
+.search-date-container {
+  gap: 37px;
+}
+
+input::-webkit-calendar-picker-indicator {
+  background-image: url('/public/icons/calendar_icon.svg');
+  width: 30px;
+  height: 33px;
+} 
+
+input::-webkit-datetime-edit {
+  font-size: 18px;
+  font-weight: 400;
+  color: #E5E5E5;
+  text-transform: uppercase;
+}
+ 
+
+/* 
+input[type="date"]::after{
+  color: #E5E5E5;
+  content: attr(placeholder);
+
+}
+
+input[type="date"]:focus::before {
+  content: "" !important;
+  display: none;
+}  */
+
+.search-form__direction-container {
+  position: relative;
+}
+
+.header_location_icon {
+  position: absolute;
+  left: 287px;
+  top: 15px;
+}
+
+.second {
+  position: absolute;
+  left: 645px;
+  top: 15px;
+}
+
+.rotate_icon {
+  margin: 0 5px;
 }
 
 .search-form__direction-input,
@@ -115,7 +177,7 @@ span {
   width: 325px;
   height: 60px;
   font-size: 18px;
-  padding: 19px 73px 11px 21px;
+  padding: 19px 14px 11px 21px;
   border-radius: 5px;
 }
 
@@ -491,7 +553,7 @@ span {
 }
 
 .footer__text {
-  font-size: 36px;
-  font-weight: 400;
-  color:#FFFFFF
+  font-size: 24px;
+  font-weight: 300;
+  color:#E5E5E5;
 }

@@ -41,7 +41,7 @@ export const Footer = () => {
                      alt='address icon'
                      className='footer__address-img'
                   />
-                  <span className='footer__left-panel-text'>г. Москва ул. Московская 27-35555 555</span>
+                  <span className='footer__left-panel-text'>г. Москва<br/> ул. Московская 27-35555 555</span>
                </div>
             </aside>
             <article className='footer__subscribe-panel'>
@@ -89,7 +89,7 @@ export const Footer = () => {
             </article>
          </section>
          <section className='footer__bottom'>
-            <h1 className='footer__logo'>Logo</h1>
+            <h1 className='footer__logo'>Лого</h1>
             <button onClick={moveToTop} className='footer__btn-circle'>
                 <img
                 src='icons/to-top-circle.svg'

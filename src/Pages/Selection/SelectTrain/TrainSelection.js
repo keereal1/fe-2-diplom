@@ -9,181 +9,263 @@ export const TrainSelection = () => {
     return (
        <section className={styles['main-container']}>
           <ul className={styles['navbar']}>
-             <li className={styles['navbar__link']}>
-                <span className={styles['navbar__link_number']}>1</span>
-                <a href='foo'>Билеты</a>
-             </li>
-             <li className={styles['navbar__link']}>
-                <span className={styles['navbar__link_number']}>2</span>
-                <a href='foo'>Пассажиры</a>
-             </li>
-             <li className={styles['navbar__link']}>
-                <span className={styles['navbar__link_number']}>3</span>
-                <a href='foo'>Оплата</a>
-             </li>
-             <li className={styles['navbar__link']}>
-                <span className={styles['navbar__link_number']}>4</span>
-                <a href='foo'>Проверка</a>
-             </li>
+            {/* //добавить wpr класс wrp__active */}
+            <div className={styles['wrp', 'wrp__active']}>
+               <li className={styles['navbar__link', 'navbar__link_active']}>
+                  <span className={styles['navbar__link_number']}>1</span>
+                  <a href='foo'className={styles['navbar__link_name']}>Билеты</a>
+               </li>
+               <img src='icons\navbar_arrow.svg' className={styles['navbar__arrow']}/>  
+            </div>
+            <div className={styles['wrp']}>
+               <li className={styles['navbar__link']}>
+                  <span className={styles['navbar__link_number']}>2</span>
+                  <a href='foo' className={styles['navbar__link_name']}>Пассажиры</a>
+               </li>
+               <img src='icons\navbar_arrow.svg' className={styles['navbar__arrow']}/>
+             </div>
+             <div className={styles['wrp']}>
+               <li className={styles['navbar__link']}>
+                  <span className={styles['navbar__link_number']}>3</span>
+                  <a href='foo' className={styles['navbar__link_name']}>Оплата</a>
+               </li>
+               <img src='icons\navbar_arrow.svg' className={styles['navbar__arrow']}/>
+             </div>
+             <div className={styles['wrp']}>
+               <li className={styles['navbar__link']}>
+                  <span className={styles['navbar__link_number']}>4</span>
+                  <a href='foo' className={styles['navbar__link_name']}>Проверка</a>
+               </li>
+             </div>
           </ul>
           <div className={styles['main-page']}>
-            <aside className={styles['widget']}>
-               <form className={styles['widget__form']}>
-                  <div className={styles['input__container']}>
-                     <label htmlFor='trip' className={styles['input__label']}>
-                        Дата поездки
-                     </label>
-                     <input type='date' id='trip' className={styles['input']} />
-                  </div>
-                  <div className={styles['input__container']}>
-                     <label htmlFor='arrival' className={styles['input__label']}>
-                        Дата возвращения
-                     </label>
-                     <input type='date' id='arrival' className={styles['input']} />
-                  </div>
-               </form>
-               <form className={styles['widget__options']}>
-                  <div className={styles['widget__option']}>
-                     <img
-                        src='icons/coupe-icon.svg'
-                        alt='coupe icon'
-                        className={styles['widget__option-icon']}
-                     />
-                     <span className={styles['widget__option-text']}>Купе</span>
-                     <div className={styles['toggle__container']}>
-                        <input
-                           type='checkbox'
-                           id='toggle'
-                           className={styles['toggle__input']}
-                           hidden
+            <aside className={styles['side']}>
+               <section className={styles['widget']}>
+                  <form className={styles['widget__form']}>
+                     <div className={styles['input__container']}>
+                        <label htmlFor='trip' className={styles['input__label']}>
+                           Дата поездки
+                        </label>
+                        <input type='date' id='trip' className={styles['input__date']}/>
+                     </div>
+                     <div className={styles['input__container']}>
+                        <label htmlFor='arrival' className={styles['input__label']}>
+                           Дата возвращения
+                        </label>
+                        <input type='date' id='arrival' className={styles['input__date']} />
+                     </div>
+                  </form>
+                  <form className={styles['widget__options']}>
+                     <div className={styles['widget__option']}>
+                        <img
+                           src='icons/coupe-icon.svg'
+                           alt='coupe icon'
+                           className={styles['widget__option-icon']}
                         />
-                        <label htmlFor='toggle' className={styles['toggle__label']}></label>
+                        <span className={styles['widget__option-text']}>Купе</span>
+                        <div className={styles['toggle__container']}>
+                           <input
+                              type='checkbox'
+                              id='toggle'
+                              className={styles['toggle__input']}
+                              hidden
+                           />
+                           <label htmlFor='toggle' className={styles['toggle__label']}></label>
+                        </div>
                      </div>
-                  </div>
-                  <div className={styles['widget__option']}>
-                     <img
-                        src='icons/platskart-icon.svg'
-                        alt='coupe icon'
-                        className={styles['widget__option-icon']}
-                     />
-                     <span className={styles['widget__option-text']}>Плацкарт</span>
-                     <div className={styles['toggle__container']}>
-                        <input
-                           type='checkbox'
-                           id='toggle'
-                           className={styles['toggle__input']}
-                           hidden
+                     <div className={styles['widget__option']}>
+                        <img
+                           src='icons/platskart-icon.svg'
+                           alt='coupe icon'
+                           className={styles['widget__option-icon']}
                         />
-                        <label htmlFor='toggle' className={styles['toggle__label']}></label>
+                        <span className={styles['widget__option-text']}>Плацкарт</span>
+                        <div className={styles['toggle__container']}>
+                           <input
+                              type='checkbox'
+                              id='toggle'
+                              className={styles['toggle__input']}
+                              hidden
+                           />
+                           <label htmlFor='toggle' className={styles['toggle__label']}></label>
+                        </div>
                      </div>
-                  </div>
-                  <div className={styles['widget__option']}>
-                     <img
-                        src='icons/siting-icon.svg'
-                        alt='coupe icon'
-                        className={styles['widget__option-icon']}
-                     />
-                     <span className={styles['widget__option-text']}>Сидячий</span>
-                     <div className={styles['toggle__container']}>
-                        <input
-                           type='checkbox'
-                           id='toggle'
-                           className={styles['toggle__input']}
-                           hidden
+                     <div className={styles['widget__option']}>
+                        <img
+                           src='icons/siting-icon.svg'
+                           alt='coupe icon'
+                           className={styles['widget__option-icon']}
                         />
-                        <label htmlFor='toggle' className={styles['toggle__label']}></label>
+                        <span className={styles['widget__option-text']}>Сидячий</span>
+                        <div className={styles['toggle__container']}>
+                           <input
+                              type='checkbox'
+                              id='toggle'
+                              className={styles['toggle__input']}
+                              hidden
+                           />
+                           <label htmlFor='toggle' className={styles['toggle__label']}></label>
+                        </div>
                      </div>
-                  </div>
-                  <div className={styles['widget__option']}>
-                     <img
-                        src='icons/lux-icon.svg'
-                        alt='coupe icon'
-                        className={styles['widget__option-icon']}
-                     />
-                     <span className={styles['widget__option-text']}>Люкс</span>
-                     <div className={styles['toggle__container']}>
-                        <input
-                           type='checkbox'
-                           id='toggle'
-                           className={styles['toggle__input']}
-                           hidden
+                     <div className={styles['widget__option']}>
+                        <img
+                           src='icons/lux-icon.svg'
+                           alt='coupe icon'
+                           className={styles['widget__option-icon']}
                         />
-                        <label htmlFor='toggle' className={styles['toggle__label']}></label>
+                        <span className={styles['widget__option-text']}>Люкс</span>
+                        <div className={styles['toggle__container']}>
+                           <input
+                              type='checkbox'
+                              id='toggle'
+                              className={styles['toggle__input']}
+                              hidden
+                           />
+                           <label htmlFor='toggle' className={styles['toggle__label']}></label>
+                        </div>
                      </div>
-                  </div>
-                  <div className={styles['widget__option']}>
-                     <img
-                        src='icons/wifi-icon.svg'
-                        alt='coupe icon'
-                        className={styles['widget__option-icon']}
-                     />
-                     <span className={styles['widget__option-text']}>WI-FI</span>
-                     <div className={styles['toggle__container']}>
-                        <input
-                           type='checkbox'
-                           id='toggle'
-                           className={styles['toggle__input']}
-                           hidden
+                     <div className={styles['widget__option']}>
+                        <img
+                           src='icons/wifi-icon.svg'
+                           alt='coupe icon'
+                           className={styles['widget__option-icon']}
                         />
-                        <label htmlFor='toggle' className={styles['toggle__label']}></label>
+                        <span className={styles['widget__option-text']}>WI-FI</span>
+                        <div className={styles['toggle__container']}>
+                           <input
+                              type='checkbox'
+                              id='toggle'
+                              className={styles['toggle__input']}
+                              hidden
+                           />
+                           <label htmlFor='toggle' className={styles['toggle__label']}></label>
+                        </div>
                      </div>
-                  </div>
-                  <div className={styles['widget__option']}>
-                     <img
-                        src='/icons/rocket-icon.svg'
-                        alt='coupe icon'
-                        className={styles['widget__option-icon']}
-                     />
-                     <span className={styles['widget__option-text']}>Экспресс</span>
-                     <div className={styles['toggle__container']}>
-                        <input
-                           type='checkbox'
-                           id='toggle'
-                           className={styles['toggle__input']}
-                           hidden
+                     <div className={styles['widget__option']}>
+                        <img
+                           src='/icons/rocket-icon.svg'
+                           alt='coupe icon'
+                           className={styles['widget__option-icon']}
                         />
-                        <label htmlFor='toggle' className={styles['toggle__label']}></label>
+                        <span className={styles['widget__option-text']}>Экспресс</span>
+                        <div className={styles['toggle__container']}>
+                           <input
+                              type='checkbox'
+                              id='toggle'
+                              className={styles['toggle__input']}
+                              hidden
+                           />
+                           <label htmlFor='toggle' className={styles['toggle__label']}></label>
+                        </div>
+                     </div>
+                  </form>
+                  <form className={styles['widget__price']}>
+                     <div className={styles['widget__price-content']}>
+                        <span className={styles['widget__price-title']}>Стоимость</span>
+                        <div className={styles['widget__slider']}>
+                           <span>от</span>
+                           <span>до</span>
+                        </div>
+                        <div className={styles['widget__rangeslider']}>
+                           <input
+                              type='range'
+                              name='range'
+                              min='1920'
+                              max='7000'
+                              defaultValue='1920'
+                              className={styles['input-ranges']}
+                           />
+                        </div>
+                        <div className={styles['value-labels']}>
+                           <span className={styles['min-value']}>1920</span>
+                           <span className={styles['max-value']}>7000</span>
+                        </div>
+                     </div>
+                  </form>
+                  <div className={styles['widget__there']}>
+                     <div className={styles['widget__there-header']}>
+                        <img src='icons/widget_there_arrow.svg' className={styles['widget__there-arrow']}></img>
+                        <span className={styles['widget__there-title']}>Туда</span>
+                        <img src='icons/widget__expand.svg' className={styles['widget__expand']}></img>
                      </div>
                   </div>
-               </form>
-               <form className={styles['widget__price']}>
-                  <div className={styles['widget__price-content']}>
-                     <span className={styles['widget__price-title']}>Стоимость</span>
-                     <div className={styles['widget__slider']}>
-                        <span>от</span>
-                        <span>до</span>
-                     </div>
-                     <div className={styles['widget__rangeslider']}>
-                        <input
-                           type='range'
-                           name='range'
-                           min='1920'
-                           max='7000'
-                           defaultValue='1920'
-                           className={styles['input-ranges']}
-                        />
-                     </div>
-                     <div className={styles['value-labels']}>
-                        <span className={styles['min-value']}>1920</span>
-                        <span className={styles['max-value']}>7000</span>
+                  <div className={styles['widget__back']}>
+                     <div className={styles['widget__back-header']}>
+                        <img src='icons/widget_back_arrow.svg' className={styles['widget__back-arrow']}></img>
+                        <span className={styles['widget__there-title']}>Обратно</span>
+                        <img src='icons/widget__expand.svg' className={styles['widget__expand']}></img>
                      </div>
                   </div>
-               </form>
-               <div className={styles['widget__there']}>
-                  <div className={styles['widget__there-header']}>
-                     <img src='icons/widget_there_arrow.svg' className={styles['widget__there-arrow']}></img>
-                     <span className={styles['widget__there-title']}>Туда</span>
-                     <img src='icons/widget__expand.svg' className={styles['widget__expand']}></img>
+               </section>
+               <section className={styles['last-tickets']}>
+                  <h3 className={styles['last-tickets__title']}>
+                     Последние билеты
+                  </h3>
+                  <div className={styles['ticket__cards']}>
+                     <div className={styles['ticket__card']}>
+                        <div className={styles['ticket__card_top']}>
+                           <div className={styles['ticket__card_from']}>
+                              <div className={styles['departure-city']}>Москва</div>
+                              <div className={styles['departure-station']}>Курский вокзал</div>
+                           </div>
+                           <div className={styles['ticket__card_to']}>
+                              <div className={styles['departure-city']}>Самара</div>
+                              <div className={styles['departure-station']}>Московский вокзал</div>
+                           </div>
+                        </div>
+                        <div className={styles['ticket__card_bottom']}>
+                           <img src='icons/train_carriage-icons.svg' className={styles['carriage-icons']}/>
+                           <div className={styles['last-tickets_price']}>
+                              <span className={styles['last-tickets_price_text']}>от</span>
+                              <span className={styles['last-tickets_price_value']}>2 500</span>
+                              <img src='icons/currency__trains.svg' className={styles['last-tickets_price_currency']}/>
+                           </div>   
+                        </div>
+                     </div>
+                     <div className={styles['ticket__card']}>
+                        <div className={styles['ticket__card_top']}>
+                           <div className={styles['ticket__card_from']}>
+                              <div className={styles['departure-city']}>Москва</div>
+                              <div className={styles['departure-station']}>Курский вокзал</div>
+                           </div>
+                           <div className={styles['ticket__card_to']}>
+                              <div className={styles['departure-city']}>Самара</div>
+                              <div className={styles['departure-station']}>Московский вокзал</div>
+                           </div>
+                        </div>
+                        <div className={styles['ticket__card_bottom']}>
+                           <img src='icons/train_carriage-icons.svg' className={styles['carriage-icons']}/>
+                           <div className={styles['last-tickets_price']}>
+                              <span className={styles['last-tickets_price_text']}>от</span>
+                              <span className={styles['last-tickets_price_value']}>2 500</span>
+                              <img src='icons/currency__trains.svg' className={styles['last-tickets_price_currency']}/>
+                           </div>   
+                        </div>
+                     </div>
+                     <div className={styles['ticket__card']}>
+                        <div className={styles['ticket__card_top']}>
+                           <div className={styles['ticket__card_from']}>
+                              <div className={styles['departure-city']}>Москва</div>
+                              <div className={styles['departure-station']}>Курский вокзал</div>
+                           </div>
+                           <div className={styles['ticket__card_to']}>
+                              <div className={styles['departure-city']}>Самара</div>
+                              <div className={styles['departure-station']}>Московский вокзал</div>
+                           </div>
+                        </div>
+                        <div className={styles['ticket__card_bottom']}>
+                           <img src='icons/train_carriage-icons.svg' className={styles['carriage-icons']}/>
+                           <div className={styles['last-tickets_price']}>
+                              <span className={styles['last-tickets_price_text']}>от</span>
+                              <span className={styles['last-tickets_price_value']}>2 500</span>
+                              <img src='icons/currency__trains.svg' className={styles['last-tickets_price_currency']}/>
+                           </div>   
+                        </div>
+                     </div>
                   </div>
-               </div>
-               <div className={styles['widget__back']}>
-                  <div className={styles['widget__back-header']}>
-                     <img src='icons/widget_back_arrow.svg' className={styles['widget__back-arrow']}></img>
-                     <span className={styles['widget__there-title']}>Обратно</span>
-                     <img src='icons/widget__expand.svg' className={styles['widget__expand']}></img>
-                  </div>
-               </div>
+               </section>
             </aside>
+
             <main className={styles['trains']}>
                   <div className={styles['trains__header']}>
                      <p className={styles['trains__header-text']}>найдено</p>

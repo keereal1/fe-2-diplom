@@ -12,41 +12,87 @@ ul {
  }
  
  .navbar {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 100px;
-    background-color: rgba(62, 60, 65, 1);
- }
- 
- .navbar__link {
-    position: relative;
-    list-style: none;
-    color: white;
- }
- 
- .navbar__link_number {
-    position: absolute;
-    left: -30px;
-    top: -10px;
-    color: white;
-    border: 3px solid white;
-    border-radius: 50%;
-    padding-inline: 12px;
-    padding-block: 7px;
- }
- 
- .navbar__link a {
-    display: block;
-    font-size: 1.8vw;
-    font-weight: 700;
-    line-height: 100%;
-    color: white;
-    margin-left: 25px;
-    height: 100%;
-    max-height: 3vh;
-    text-decoration: none;
- }
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  height: 88px;
+  /* padding: 0 230px; */
+  background-color: #3E3C41;
+}
+
+.wrp,
+.wrp__active {
+ width: 33%;
+ height: 100%;
+ text-align: center;
+ display: flex;
+ justify-content: space-between;
+}
+
+.wrp:nth-of-type(1n+2),
+.wrp__active:nth-of-type(1n+2)  {
+ width: 17%;
+}
+
+.wrp:first-of-type,
+.wrp__active:first-of-type {
+ padding-left: 230px;
+}
+
+.wrp:not(:first-of-type),
+.wrp__active:not(:first-of-type)  {
+ margin-left: 35px;
+}
+
+.wrp__active {
+ background-image: url('/public/icons/Rectangle.svg');
+ background-size: 100% 100%;
+}
+
+
+/* .navbar__arrow {
+ border-width: 0px 0px 0px 100px;
+ border-style: solid;
+ border-color: #3E3C41 #3E3C41 #3E3C41 #FFA800;
+} */
+
+.navbar__link,
+.navbar__link_active {
+  /* position: relative; */
+  list-style: none;
+  /* width: calc(100% / 4); */
+  height: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+/* 
+.navbar__link:not(:first-child) {
+ margin-left: 35px;
+} */
+
+.navbar__link_number {
+  /* position: absolute;
+  left: -30px;
+  top: -10px; */
+  color: white;
+  border: 3px solid white;
+  border-radius: 50%;
+  padding-inline: 12px;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.navbar__link a,
+.navbar__link_name {
+  display: block;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 100%;
+  color: white;
+  margin-left: 25px;
+  text-decoration: none;
+}
 
   .main-page {
    width: 100%;
@@ -57,12 +103,14 @@ ul {
  }
 
  .widget {
-   max-width: 360px;
-   max-height: 1279px;
-   margin-right: 5%;
-   margin-bottom: 142px;
-   background-color: rgba(62, 60, 65, 1);
- } 
+  display: flex;
+  flex-direction: column;
+  margin-right: 5%;
+  max-height: 1279px;
+  padding-top: 1px;
+  padding-bottom: 30px;
+  background-color: rgba(62, 60, 65, 1);
+}
 
  .widget__header {
   font-size: 30px;
@@ -75,9 +123,12 @@ ul {
  .widget__there,
  .widget__back,
  .widget__passengers {
-   margin-top: 25px;
    padding: 0 30px 0;
    border-bottom: 1px solid #E5E5E5;
+ }
+
+ .widget__there {
+  border-top: 1px solid #E5E5E5;
  }
 
  .widget__back {
@@ -218,6 +269,11 @@ ul {
   font-size: 48px;
   font-weight: 700;
   color: #FFA800;
+ }
+
+ .currency-icon_total {
+  display: inline-block;
+  margin-left: 7px;
  }
 
 .widget__total {
