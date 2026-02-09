@@ -9,7 +9,11 @@ export const FinalPage = () => {
 
     return (
        <main className={styles['main-container']}>
+            <h2 className={styles['final_title']}>
+                Благодарим Вас за заказ!
+            </h2>
           <div className={styles['final-page']}>
+
             <div className={styles['final-page_header']}>
                <div className={styles['order-number']}> 
                   №Заказа 285АА

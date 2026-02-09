@@ -59,10 +59,6 @@
   font-weight: 100;
   display: inline-block;
   width: 506px;
-  /* margin-left: 350px;
-  margin-right: 104px;
-  margin-bottom: 242px;
-  margin-top: 415px; */
   margin: 20% 40% 15% 10%;;
 }
 
@@ -80,7 +76,7 @@ span {
   align-self: flex-end;
   z-index: 1;
   margin-left: calc(100% - 710px - 6%);
-   margin-top: -30%;
+  margin-top: -30%;
 }
 
 .search-form::after {

@@ -15,7 +15,7 @@ export const TrainSelection = () => {
                   <span className={styles['navbar__link_number']}>1</span>
                   <a href='foo'className={styles['navbar__link_name']}>Билеты</a>
                </li>
-               <img src='icons\navbar_arrow.svg' className={styles['navbar__arrow']}/>  
+               <img src='icons\navbar_arrow.svg' className={styles['navbar__arrow']}/>
             </div>
             <div className={styles['wrp']}>
                <li className={styles['navbar__link']}>

@@ -19,7 +19,7 @@ export const SeatSelection = () => {
                </li>
                <img src='icons\navbar_arrow.svg' className={styles['navbar__arrow']}/>  
             </div>
-            <div className={styles['wrp']}>
+            <div className={styles['wrp', 'wrp__active']}>
                <li className={styles['navbar__link']}>
                   <span className={styles['navbar__link_number']}>2</span>
                   <a href='foo' className={styles['navbar__link_name']}>Пассажиры</a>

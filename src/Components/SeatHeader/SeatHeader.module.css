@@ -1,0 +1,186 @@
+.header {
+    background-image: url('../../../public/images/SeatGroup_image.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: #FFFFFF;
+  
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 15px;
+  }
+  
+  .logo {
+    font-size: 36px;
+    font-weight: 900;
+    padding-left: 258px;
+  }
+  
+  .menu-list {
+    display: flex;
+    align-items: center;
+    height: 94px;
+    background-color: #292929;
+    margin-bottom: 111px;
+  }
+  
+  .menu-items {
+    list-style-type: none;
+    display: flex;
+    align-content: center;
+    gap: 83px;  
+    font-size: 30px;
+    font-weight: 300;  
+    padding-left: 258px;
+  }
+  
+  .menu-link {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-decoration: none;
+    color: #FFFFFF;
+  }
+  
+  .menu-link:hover {
+    text-decoration: underline;
+  }
+
+  span {
+    font-weight: 300;
+  }
+  
+  .search-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 calc(100% - 1490px);
+    padding: 0 42px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .search-form_info {
+    display: flex;
+    width: 100%;
+    box-sizing: content-box;
+  }
+
+  .search-form::after {
+    position: absolute;
+    background-color: #292929;
+    content: "";
+    opacity: 0.8;  
+    z-index: 2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .search-form__direction,
+  .search-form__date {
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+    width: 100%;
+  }
+
+
+  .search-form__direction-title,
+  .search-form__date-title {
+    font-size: 30px;
+    font-weight: 300;
+    margin: 28px 0 9px 0;
+  }
+
+  input::-webkit-calendar-picker-indicator {
+    background-image: url('/public/icons/calendar_icon.svg');
+    width: 30px;
+    height: 33px;
+  } 
+  
+  input::-webkit-datetime-edit {
+    font-size: 18px;
+    font-weight: 400;
+    color: #E5E5E5;
+    text-transform: uppercase;
+  }
+   
+  
+/*   
+  input[type="date"]::after{
+    color: #E5E5E5;
+    content: attr(placeholder);
+  
+  }
+  
+  input[type="date"]:focus::before {
+    content: "" !important;
+    display: none;
+  }  */
+  
+  .search-form__direction-container {
+    display: flex;
+    position: relative;
+  }
+
+  .search-date-container {
+    display: flex;
+  }
+
+  .header_location_icon {
+    position: absolute;
+    left: calc((285 / (325 + 38 + 35 + 325)) * 100%);
+    top: 15px;
+  }
+  
+  .header_location_icon-second {
+    position: absolute;
+    left: calc(((318 + 325) / (325 + 38 + 35 + 325)) * 100%);
+    top: 15px;
+  }
+  
+  .rotate_icon {
+    margin: 0 5px;
+    position: relative;
+  }
+  
+  .search-form__direction-input,
+  .search-form__date-input {
+    /* max-width: 325px; */
+    margin-right: 35px;
+    width: 100%;
+    height: 60px;
+    font-size: 18px;
+    padding: 19px 14px 11px 21px;
+    border-radius: 5px;
+  }
+
+  .search-form__date-input:last-of-type {
+    margin-right: 0;
+  }
+
+  .search-form__direction-input:first-of-type {
+    margin-right: 0;
+  }
+  
+  .search-form__direction-input::placeholder,
+  .search-form__date-input::placeholder {
+    color: #E5E5E5;
+  }
+  
+  .search-form__button {
+    width: 284px;
+    height: 60px;
+    margin-top: 47px;
+    margin-bottom: 76px;
+    align-self: flex-end;
+    border-radius: 5px;
+    background-color: #FFA800;
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    z-index: 3;
+    cursor: pointer;
+  }
