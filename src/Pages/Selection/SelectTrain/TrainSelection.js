@@ -11,7 +11,7 @@ export const TrainSelection = () => {
           <ul className={styles['navbar']}>
             {/* //добавить wpr класс wrp__active */}
             <div className={styles['wrp', 'wrp__active']}>
-               <li className={styles['navbar__link', 'navbar__link_active']}>
+               <li className={styles['navbar__link']}>
                   <span className={styles['navbar__link_number']}>1</span>
                   <a href='foo'className={styles['navbar__link_name']}>Билеты</a>
                </li>
