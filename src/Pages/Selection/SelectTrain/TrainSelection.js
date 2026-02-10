@@ -1,5 +1,5 @@
 import styles from './TrainSelection.module.css'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { SEAT_SELECT_ROUTE } from '../../../App/routes/routes';
 
 export const TrainSelection = () => {

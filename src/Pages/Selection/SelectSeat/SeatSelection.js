@@ -1,5 +1,5 @@
 import styles from './SeatSelection.module.css'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { TRAIN_SELECT_ROUTE } from '../../../App/routes/routes';
 import { PASSENGER_FORM_ROUTE } from '../../../App/routes/routes';
 

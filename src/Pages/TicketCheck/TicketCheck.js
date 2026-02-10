@@ -1,20 +1,10 @@
 import styles from './TicketCheck.module.css'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { FINAL_PAGE_ROUTE } from '../../App/routes/routes';
 
 export const TicketCheck = () => {
 
    const navigate = useNavigate();
-
-   const onSelect = (e) => {
-      console.log(e.target.value)
-   }
-
-   const onChange = (e) => {
-      const name = e.currentTarget;
-      name.className.add('checked');
-      return console.log(name)
-   }
 
     return (
        <section className={styles['main-container']}>

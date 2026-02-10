@@ -1,5 +1,5 @@
 import styles from './PassengerForm.module.css'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { PAYMENT_FORM_ROUTE } from '../../../../src/App/routes/routes';
 
 export const PassengerForm = () => {

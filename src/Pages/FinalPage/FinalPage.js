@@ -1,7 +1,6 @@
 import styles from './FinalPage.module.css'
-import { Link, useNavigate } from 'react-router-dom'
-import { Main } from '../Main/Main';
-import { useRef } from 'react';
+import { useNavigate } from 'react-router-dom'
+
 
 export const FinalPage = () => {
 

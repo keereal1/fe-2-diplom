@@ -3,12 +3,6 @@ import styles from './FinalHeader.module.css'
 import { Link, useNavigate } from 'react-router-dom'
 
 export const FinalHeader = () => {
-    const navigate = useNavigate()
-
-    const onClick = (e) => {
-        e.target.type = 'date';
-        console.log(e.target)
-    }
 
     return (
         <div className={styles['header']}>

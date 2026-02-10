@@ -6,11 +6,6 @@ import { TRAIN_SELECT_ROUTE } from '../../App/routes/routes'
 export const SeatHeader = () => {
     const navigate = useNavigate()
 
-    const onClick = (e) => {
-        e.target.type = 'date';
-        console.log(e.target)
-    }
-
     return (
         <div className={styles['header']}>
             <div className={styles['logo']}>
