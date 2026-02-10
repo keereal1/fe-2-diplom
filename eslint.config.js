@@ -1,18 +1,18 @@
-// {
-//     "extends": ["eslint:recommended", "plugin:react/recommended"]
-//   }
+{
+    "extends": ["eslint:recommended", "plugin:react/recommended"]
+  }
 
-// {
-//   "plugins": [
-//       "react"
-//     ],
-//     "extends": ["eslint:all", "plugin:react/all"]
-// }
+{
+  "plugins": [
+      "react"
+    ],
+    "extends": ["eslint:all", "plugin:react/all"]
+}
 
-// {
-//   "extends": ["react-app", "plugin:jsx-a11y/recommended"],
-//   "plugins": ["jsx-a11y"]
-// }
+{
+  "extends": ["react-app", "plugin:jsx-a11y/recommended"],
+  "plugins": ["jsx-a11y"]
+}
 
 const react = require('eslint-plugin-react');
 const globals = require('globals');
