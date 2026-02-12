@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createHashRouter } from "react-router";
 import { MainTemplate } from "./MainTemplate";
 import { SeatTemplate } from "./SeatTemplate";
 import { FinalTemplate } from "./routes/FinalTemplate";
@@ -12,7 +12,7 @@ import { PaymentForm } from "../Pages/Payment/PaymentForm";
 import { TicketCheck } from "../Pages/TicketCheck/TicketCheck";
 import { FinalPage } from "../Pages/FinalPage/FinalPage";
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
     {
         path: '/',
         // element: <MainTemplate/>,

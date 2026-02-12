@@ -2,7 +2,7 @@
   "name": "fe-2-diplom",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://keereal1.github.io/fe-2-diplom",
+  "homepage": ".",
   "dependencies": {
     "@babel/core": "^7.16.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
