@@ -8,7 +8,7 @@ import { SEAT_SELECT_ROUTE, TRAIN_SELECT_ROUTE, PASSENGER_FORM_ROUTE, PAYMENT_FO
 import { TrainSelection } from "../Pages/Selection/SelectTrain/TrainSelection";
 import { SeatSelection } from "../Pages/Selection/SelectSeat/SeatSelection";
 import { PassengerForm } from "../Pages/Selection/PassengerForm/PassengerForm";
-import { PaymentForm } from "../Pages/Payment/PaymentForm";
+import { Payment } from "../Pages/Payment/Payment";
 import { TicketCheck } from "../Pages/TicketCheck/TicketCheck";
 import { FinalPage } from "../Pages/FinalPage/FinalPage";
 
@@ -46,7 +46,7 @@ export const router = createHashRouter([
                     },
                     {
                         path:PAYMENT_FORM_ROUTE,
-                        element: <PaymentForm/>,
+                        element: <Payment/>,
                     },
                     {
                         path: TICKET_CHECK_ROUTE,

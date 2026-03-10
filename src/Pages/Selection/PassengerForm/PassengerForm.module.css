@@ -160,6 +160,10 @@ ul {
   max-height: 20px;
  }
 
+ .widget__shrink:hover {
+  cursor: pointer;
+ }
+
 .train__number,
 .train__route,
 .train__time,
@@ -396,10 +400,6 @@ ul {
   margin-bottom: 7px;
 }
 
-.sex__choises {
-  margin-top: 7px;
-}
-
 .sex__btn {
   width: 101px; 
   height: 50px; 
@@ -477,7 +477,7 @@ ul {
 
 .next-passanger__container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -566,31 +566,20 @@ textarea {
   color: #FFFFFF;
 }
 
-.next-passanger__container-success {
-  display: flex;
+.next-passanger__container--success {
   justify-content: space-between;
   background-color: #B2F6A1;
-  align-items: center;
+  border: 1px solid #B2F6A1;
 }
 
-.next-passanger__btn-success {
-  width: 303px;
-  height: 52px;
-  align-self: flex-end;
-  margin: 37px 31px 28px 0;
-  border: 1px solid #292929;
-  border-radius: 5px;
-  background-color: #B2F6A1;
-  color: #292929;
-  margin-left: 10px;
-  font-size: 24px;
-  font-weight: 700;
-  cursor: pointer;
- }
 
-.next-passanger__btn-success:hover {
- background-color: #FFA800;
- border: 1px solid #FFA800;
- cursor: pointer;
- transition: all 0.3s;  
+.success__icon {
+  width: 32px;
+  height: 32px;
+}
+
+.success__text {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 400;
 }

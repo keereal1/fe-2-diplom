@@ -1,11 +1,10 @@
-import styles from './SeatSelection.module.css'
 import { useNavigate } from 'react-router-dom'
-import { PASSENGER_FORM_ROUTE } from '../../../App/routes/routes';
-import { RoutesFilter } from '../../../Components/RoutesFilter/RoutesFilter';
-import { LastTickets } from '../../../Components/LastTickets';
-import { SeatSelect } from '../../../Components/SeatSelect/SeatSelect';
+import { TICKET_CHECK_ROUTE } from '../../App/routes/routes';
+import { TripDetails } from '../../Components/TripDetails';
+import { PaymentForm } from '../../Components/PaymentForm';
+import styles from './Payment.module.css';
 
-export const SeatSelection = () => {
+export const Payment = () => {
 
    const navigate = useNavigate();
 
@@ -20,14 +19,14 @@ export const SeatSelection = () => {
                </li>
                <img src='icons\navbar_arrow.svg' className={styles['navbar__arrow']}/>
             </div>
-            <div className={styles['wrp']}>
+            <div className={styles['wrp', 'wrp__active']}>
                <li className={styles['navbar__link']}>
                   <span className={styles['navbar__link_number']}>2</span>
                   <a href='foo' className={styles['navbar__link_name']}>Пассажиры</a>
                </li>
                <img src='icons\navbar_arrow.svg' className={styles['navbar__arrow']}/>
              </div>
-             <div className={styles['wrp']}>
+             <div className={styles['wrp', 'wrp__active']}>
                <li className={styles['navbar__link']}>
                   <span className={styles['navbar__link_number']}>3</span>
                   <a href='foo' className={styles['navbar__link_name']}>Оплата</a>
@@ -42,20 +41,21 @@ export const SeatSelection = () => {
              </div>
           </ul>
           <div className={styles['main-page']}>
-            <aside className={styles['side']}>
-               <RoutesFilter/>
-               <section className={styles['last-tickets']}>
-                  <h3 className={styles['last-tickets__title']}>
-                     Последние билеты
-                  </h3>
-                  <LastTickets/>
-               </section>
+            <aside className={styles['widget']}>
+               <div className={styles['widget__header']}>
+                     Детали поездки
+               </div>
+               <TripDetails/>
             </aside>
-            <main className={styles['seats']}>
-                  <h3 className={styles['seats__header']}>Выбор мест</h3>
-                  <SeatSelect/>
-                  <section className={styles['to-form']}>
-                     <button type='button' className={styles['to-form__btn']} onClick={() => navigate(PASSENGER_FORM_ROUTE)}>Далее</button>
+            <main className={styles['passengers']}>
+                  <article className={styles['passenger']}>
+                     <div className={styles['passenger__header']}>
+                        <span className={styles['passenger__header-title']}>Персональные данные</span>                      
+                     </div>   
+                     <PaymentForm/>
+                  </article>
+                  <section className={styles['buy']}>
+                     <button type='button' className={styles['buy__btn']} onClick={() => navigate(TICKET_CHECK_ROUTE)}>Купить билеты</button>
                   </section>
             </main>
           </div>

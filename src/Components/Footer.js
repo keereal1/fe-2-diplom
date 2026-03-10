@@ -1,3 +1,5 @@
+import { Subscription } from "./Subscription"
+
 export const Footer = () => {
 
     const moveToTop = () => {window.scrollTo({top:0, behavior:"smooth"})}
@@ -46,46 +48,29 @@ export const Footer = () => {
             </aside>
             <article className='footer__subscribe-panel'>
                <div className='footer__subscribe-panel-email'>
-                  <h3 className='footer__subscribe-panel-title'>Подписка</h3>
-                  <form className='footer__subscribe-panel-form'>
-                     <label
-                        htmlFor='subscribe-panel__input'
-                        className='footer__subscribe-panel-input-label'
-                     >
-                        Будьте в курсе событий
-                     </label>
-                     <div className='footer__subscribe-panel-input-container'>
-                        <input
-                           id='subscribe-panel__input'
-                           type='email'
-                           name='subscribe-panel__input'
-                           placeholder='e-mail'
-                           className='footer__subscribe-panel-input'
-                        />
-                        <button className='footer__subscribe-panel-button'>отправить</button>
-                     </div>
-                  </form>
-               </div>
+                <h3 className='footer__subscribe-panel-title'>Подписка</h3>
+                <Subscription/>
+            </div>
                <div className='footer__subscribe-panel-social'>
-                  <h3 className='footer__subscribe-panel-title'>Подписывайтесь на нас</h3>
-                  <div className='footer__subscribe-panel-socials'>
-                     <a href='foo' className='footer__subscribe-panel-icon'>
-                        <img src='icons/youtube-icon.svg' alt='youtube-icon' />
-                     </a>
-                     <a href='foo' className='footer__subscribe-panel-icon'>
-                        <img src='icons/linkedin-icon.svg' alt='linkedin-icon' />
-                     </a>
-                     <a href='foo' className='footer__subscribe-panel-icon'>
-                        <img src='icons/google-icon.svg' alt='google-icon' />
-                     </a>
-                     <a href='foo' className='footer__subscribe-panel-icon'>
-                        <img src='icons/fb-icon.svg' alt='facebook-icon' />
-                     </a>
-                     <a href='foo' className='footer__subscribe-panel-icon'>
-                        <img src='icons/twitter-icon.svg' alt='twitter-icon' />
-                     </a>
-                  </div>
-               </div>
+                <h3 className='footer__subscribe-panel-title'>Подписывайтесь на нас</h3>
+                <div className='footer__subscribe-panel-socials'>
+                  <a href='foo' className='footer__subscribe-panel-icon'>
+                     <img src='icons/youtube-icon.svg' alt='youtube-icon' />
+                  </a>
+                  <a href='foo' className='footer__subscribe-panel-icon'>
+                     <img src='icons/linkedin-icon.svg' alt='linkedin-icon' />
+                  </a>
+                  <a href='foo' className='footer__subscribe-panel-icon'>
+                     <img src='icons/google-icon.svg' alt='google-icon' />
+                  </a>
+                  <a href='foo' className='footer__subscribe-panel-icon'>
+                     <img src='icons/fb-icon.svg' alt='facebook-icon' />
+                  </a>
+                  <a href='foo' className='footer__subscribe-panel-icon'>
+                     <img src='icons/twitter-icon.svg' alt='twitter-icon' />
+                  </a>
+                </div>
+            </div>
             </article>
          </section>
          <section className='footer__bottom'>
